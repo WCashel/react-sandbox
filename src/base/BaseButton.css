@@ -1,0 +1,15 @@
+.btn {
+    color: white;
+    opacity: 0.6;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.btn-success {
+    background-color: green;
+}
+.btn-failure {
+    background-color: red;
+}

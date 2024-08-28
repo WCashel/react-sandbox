@@ -2,6 +2,11 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import BaseText from './base/BaseText'
+import BaseFieldset from './base/BaseFieldset'
+import BaseForm from './base/BaseForm'
+import BaseButton from './base/BaseButton'
+import BaseSelect from './base/BaseSelect'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +23,16 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
+
+        <BaseForm>
+          <BaseFieldset>
+            <BaseText name='Firstname' initValue=''/>
+            <BaseSelect name='Type' options={['male', 'female']} />
+          </BaseFieldset>
+          <BaseButton className={"btn btn-failure"}  text='Reset'/>
+          <BaseButton className={"btn btn-success"} text='Submit'/>
+        </BaseForm>
+        
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
